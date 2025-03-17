@@ -22,7 +22,6 @@ def dxdydz(_,j, rho):
 xyz_init = (0,1,0)
 t_range = [0,100]
 
-plt.show()
 for i in range(0,4):
     solb = solve_ivp(dxdydz,t_range,xyz_init, args=[r[i]])
     plt.subplots()
@@ -63,6 +62,7 @@ ax.set_xlabel("x")
 ax.set_ylabel("y")
 ax.set_zlabel("z")
 
+plt.show()
 plt.close()
 #When the x value is increased by a small amount, the hole closer
 #to the y axis becomes smaller.
